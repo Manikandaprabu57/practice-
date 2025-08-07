@@ -2,7 +2,7 @@ const button = document.queryselector('button')
 //even listener
 button.addEventListener('click',displayStats)
 function displayStats(){
-    console.log('clicked')
+    console.log('clickeed')
     const input = document.getElementById('input')
     const city = input.options[input.selectedIndex].value
     let population =0, litracyrate = 0, language = 0
