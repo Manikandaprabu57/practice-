@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="wrapper">
-        <h2>Select a city</h2>
-        <div class="inputdiv">
-            <select id="input">
-                <option value="Bengaluru">Bengaluru</option>
-                <option value="chennai">chennai</option>
-                <option value="Mumbai">Mumbai</option>
-                <option value="Delhi">Delhi</option>
-                <option value="andhra">andhra</option>
-            </select>
-        </div>
-        <div>
-            <button type="submit">show results</button>
-        </div>
+    <h1>cm</h1>
+    <div class="cm">
+        <input type="number" id="cm" placeholder="Enter cm">
+        <button type="submit" onclick="convert()">Convert</button>
+        <div id="cmResult"></div>
     </div>
+    <script>
+        function convert() {
+            let cm = document.getElementById('cm');
+            let result = document.getElementById('cmResult');
+            let cmvalue = Number(cm.value);
+            let inches = cmvalue / 2.54
+            result.innerHTML =  inches.toFixed(3) +" inches";
+        }
+    </script>
 </body>
 </html>
