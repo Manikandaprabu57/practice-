@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD rate</title>
+</head>
+<body>
+    <input type="text" id="fd">
+    <button onclick="rate()">button</button>
+    <div id="result"></div>
+    <script>
+    function rate() {
+        let fd = document.getElementById('fd');
+        let fdval = fd.value;
+        let result = document.getElementById('result');
+        if (fdval < 1000) {
+            result.innerHTML = "Minimum FD amount is 1000";
+        } else if (fdval >= 1000 && fdval < 50000) {
+            result.innerHTML = "FD rate is 5%";
+        } else if (fdval >= 50000 && fdval < 100000) {
+            result.innerHTML = "FD rate is 6%";
+        } else {
+            result.innerHTML = "FD rate is 7%";
+        }
+    }
+    </script>
+</body>
+</html>
